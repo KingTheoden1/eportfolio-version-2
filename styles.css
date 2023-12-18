@@ -718,21 +718,8 @@ SHAPES
         text-align: center;
     }
 
-    .project__description--links {
-        display: flex;
-        justify-content: center;
-    }
-
-    .project__description--title {
-        font-size: 32px;
-        line-height: 1;
-        text-align: center;
-    }
-
     .project__description--sub-title {
-        text-align: center;
-        margin: 12px 0;
-        /* margin-bottom: 8px; */
+        margin-bottom: 8px;
     }
 
     .modal__half {
