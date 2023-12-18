@@ -511,8 +511,11 @@ PROJECTS
 }
 
 .project__img {
+    display: block;
     width: 100%;
     transition: all 600ms ease;
+    margin: 0;
+    padding: 0;
 }
 
 .project__wrapper {
