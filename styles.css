@@ -7,6 +7,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 li {
     list-style-type: none;
 }
@@ -94,7 +98,7 @@ input:focus, textarea:focus {
 }
 
 .secondary {
-    color: #1c1465 !important;
+    color: #2160ff !important;
 }
 
 .link__hover-effect {
@@ -203,7 +207,7 @@ LANDING PAGE
 }
 
 .social__link {
-    background-color: #1c1465;
+    background-color: #2160ff;
     color: white;
     padding: 6px;
     width: 32px;
