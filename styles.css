@@ -692,8 +692,8 @@ SHAPES
 /* Small phones, tablets, large smartphones */
 @media (max-width: 768px) {
     .project {
-        flex: 1 1 calc(50% - 20px); /* two columns on smaller screens */
-        max-width: calc(50% - 20px);
+        flex: 1 1 100%; /* single column */
+        max-width: 100%;
       }
     
     .title {
