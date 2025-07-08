@@ -508,11 +508,13 @@ PROJECTS
 
 .project {
     /* margin-bottom: 135px; */
-    flex: 1 1 calc(25% - 20px); /* four columns */
-    max-width: calc(25% - 20px);
+    flex: 1 1 22%; /* closer to original size, with space for 4 in a row */
+    max-width: 22%;
     box-sizing: border-box;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .project__list {
@@ -527,6 +529,7 @@ PROJECTS
 .project__img {
     display: block;
     width: 100%;
+    height: auto;
     transition: all 600ms ease;
     margin: 0;
     padding: 0;
