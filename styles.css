@@ -507,8 +507,22 @@ PROJECTS
 }
 
 .project {
-    margin-bottom: 135px;
+    /* margin-bottom: 135px; */
+    flex: 1 1 calc(25% - 20px); /* four columns */
+    max-width: calc(25% - 20px);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
 }
+
+.project__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* centers items when less than 4 */
+    gap: 20px; /* spacing between items */
+    padding: 0;
+    list-style: none;
+  }
 
 .project__img {
     display: block;
@@ -673,6 +687,11 @@ SHAPES
 
 /* Small phones, tablets, large smartphones */
 @media (max-width: 768px) {
+    .project {
+        flex: 1 1 calc(50% - 20px); /* two columns on smaller screens */
+        max-width: calc(50% - 20px);
+      }
+    
     .title {
         font-size: 80px;
     }
@@ -698,6 +717,11 @@ SHAPES
 
 /* Small phones */
 @media (max-width: 480px) {
+    .project {
+        flex: 1 1 100%; /* single column on mobile */
+        max-width: 100%;
+      }
+    
     .title {
         font-size: 52px;
     }
