@@ -645,6 +645,10 @@ footer {
   color: var(--text-color);
 }
 
+body.dark-theme .section__sub-description {
+  color: #ffffff;
+}
+
 
 /*
 
