@@ -636,6 +636,16 @@ footer {
     color: white;
 }
 
+.section__sub-description {
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 2rem auto 6rem;
+  text-align: center;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+
 /*
 
 SHAPES
