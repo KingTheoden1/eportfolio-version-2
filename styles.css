@@ -581,12 +581,10 @@ PROJECTS
 
 .project__description--title {
     font-size: 36px;
-    margin-left: -40px;
 }
 
 .project__description--sub-title {
     margin-top: 8px;
-    margin-left: -40px;
 }
 
 .project__description--link {
@@ -596,7 +594,7 @@ PROJECTS
 }
 
 .project__description--para {
-    margin: 6px 0 4px -40px;
+    margin: 6px 0;
 }
 
 /*
