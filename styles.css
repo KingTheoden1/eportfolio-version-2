@@ -342,7 +342,7 @@ MODAL
 
 .modal__half {
     width: 50%;
-    padding: 40px 72px;
+    padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -356,13 +356,14 @@ MODAL
 }
 
 .modal__about {
-    background-color: rgb(245, 245, 245);
+    background-color: white;
     transform: translateX(-110%);
 }
 
 .modal__languages {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .modal__language {
@@ -734,6 +735,21 @@ SHAPES
 }
 
 /* Small phones */
+@media (max-width: 942px) and (min-width: 772px) {
+    #projects:not(.cms-projects) .project__description--para,
+    #projects:not(.cms-projects) .project__description--sub-title {
+        display: none;
+    }
+
+    #projects:not(.cms-projects) .project__description {
+        left: 0;
+        padding: 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Small phones */
 @media (max-width: 480px) {
     .project {
         flex: 1 1 100%; /* single column on mobile */
@@ -752,18 +768,18 @@ SHAPES
         display: none;
     }
 
-    .project__description--para {
+    #projects:not(.cms-projects) .project__description--para {
         display: none;
     }
 
-    .project__description {
+    #projects:not(.cms-projects) .project__description {
         left: 0;
         padding: 0;
         width: 100%;
         text-align: center;
     }
 
-    .project__description--sub-title {
+    #projects:not(.cms-projects) .project__description--sub-title {
         margin-bottom: 8px;
     }
 
