@@ -797,12 +797,18 @@ SHAPES
     #personal-projects .project__description--para,
     #personal-projects .project__description--sub-title,
     #professional-projects .project__description--para,
-    #professional-projects .project__description--sub-title {
+    #professional-projects .project__description--sub-title,
+    #cms-projects .project__description--para,
+    #cms-projects .project__description--sub-title,
+    #figma-projects .project__description--para,
+    #figma-projects .project__description--sub-title {
         display: none;
     }
 
     #personal-projects .project__description,
-    #professional-projects .project__description {
+    #professional-projects .project__description,
+    #cms-projects .project__description,
+    #figma-projects .project__description {
         left: 0;
         padding: 0;
         width: 100%;
@@ -830,12 +836,16 @@ SHAPES
     }
 
     #personal-projects .project__description--para,
-    #professional-projects .project__description--para {
+    #professional-projects .project__description--para,
+    #cms-projects .project__description--para,
+    #figma-projects .project__description--para {
         display: none;
     }
 
     #personal-projects .project__description,
-    #professional-projects .project__description {
+    #professional-projects .project__description,
+    #cms-projects .project__description,
+    #figma-projects .project__description {
         left: 0;
         padding: 0;
         width: 100%;
@@ -843,7 +853,9 @@ SHAPES
     }
 
     #personal-projects .project__description--sub-title,
-    #professional-projects .project__description--sub-title {
+    #professional-projects .project__description--sub-title,
+    #cms-projects .project__description--sub-title,
+    #figma-projects .project__description--sub-title {
         margin-bottom: 8px;
     }
 
