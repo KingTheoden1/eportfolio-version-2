@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
 
 :root {
     --primary-blue: #2160ff;
@@ -716,68 +716,13 @@ footer {
   margin: 2rem auto 6rem;
   text-align: center;
   line-height: 1.6;
-  color: var(--text-color);
+  color: var(--text-dark);
 }
 
-body.dark-theme .section__sub-description {
-  color: #ffffff;
+.dark-theme .section__sub-description {
+  color: var(--text-light);
 }
 
-
-/*
-
-SHAPES
-
-*/
-
-.shape {
-    position: fixed;
-}
-
-.shape--0 {
-    top: 15vh;
-    left: 5vw;
-}
-
-.shape--1 {
-    top: 15vh;
-    left: 50vw;
-}
-
-.shape--2 {
-    top: 15vh;
-    left: 80vw;
-}
-
-.shape--3 {
-    top: 50vh;
-    left: 5vw;
-}
-
-.shape--4 {
-    top: 50vh;
-    left: 50vw;
-}
-
-.shape--5 {
-    top: 50vh;
-    left: 80vw;
-}
-
-.shape--6 {
-    top: 80vh;
-    left: 5vw;
-}
-
-.shape--7 {
-    top: 80vh;
-    left: 50vw;
-}
-
-.shape--8 {
-    top: 80vh;
-    left: 80vw;
-}
 
 /* Scroll fade-in animation */
 .fade-in {
