@@ -1,0 +1,47 @@
+# Isaac Funes — Portfolio
+
+Personal portfolio website showcasing my frontend development projects, professional work, CMS experience, and Figma designs.
+
+**Live site:** [KingTheoden1.github.io](https://kingtheoden1.github.io) *(update with actual URL)*
+
+---
+
+## Tech Stack
+
+- Vanilla HTML5, CSS3, JavaScript — no frameworks or build tools
+- EmailJS — contact form backend
+- Font Awesome — icons
+- Google Fonts (Roboto)
+
+## Features
+
+- Responsive design across desktop, tablet, and mobile
+- Dark mode toggle
+- Animated project card hover overlays
+- Scroll-triggered fade-in animations
+- Contact form with client-side validation
+- Keyboard-accessible navigation dropdown
+- CMS section with show more/less toggle
+
+## Project Sections
+
+- **Personal** — React, Next.js, and TypeScript projects built from scratch
+- **Professional** — Client and organizational work
+- **CMS** — WordPress, DNN, and Wix sites built for clients
+- **Figma** — UI/UX design files
+
+## Structure
+
+```
+├── index.html
+├── styles.css
+├── index.js
+├── robots.txt
+└── assets/
+```
+
+## Contact
+
+- Email: isaacfunes@icloud.com
+- LinkedIn: [linkedin.com/in/isaacfunes](https://www.linkedin.com/in/isaacfunes/)
+- GitHub: [github.com/KingTheoden1](https://github.com/KingTheoden1)
