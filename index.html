@@ -3,7 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Isaac Funes</title>
+    <title>Isaac Funes | Frontend Developer</title>
+    <meta name="description" content="Frontend Developer focused on building complex web applications with great user experiences. Skilled in React, Next.js, TypeScript, and modern CSS.">
+    <meta name="author" content="Isaac Funes">
+    <meta property="og:title" content="Isaac Funes | Frontend Developer">
+    <meta property="og:description" content="Frontend Developer focused on building complex web applications with great user experiences.">
+    <meta property="og:image" content="./assets/logo.png">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Isaac Funes | Frontend Developer">
+    <meta name="twitter:description" content="Frontend Developer focused on building complex web applications with great user experiences.">
+    <link rel="icon" type="image/png" href="./assets/logo.png">
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/69db808567.js" crossorigin="anonymous"></script>
     <script src="index.js"></script>
@@ -37,7 +47,7 @@
                         link__hover-effect
                         link__hover-effect--black
                     ">Projects</a>
-                    <ul class="dropdown__menu">
+                    <ul class="dropdown__menu" role="menu">
                         <li><a href="#personal-projects" class="dropdown__link">Personal</a></li>
                         <li><a href="#professional-projects" class="dropdown__link">Professional</a></li>
                         <li><a href="#cms-projects" class="dropdown__link">CMS</a></li>
@@ -56,7 +66,7 @@
                         nav__link--anchor
                         link__hover-effect
                         link__hover-effect--black
-                    "><i class="fas fa-adjust"></i></a>
+                    " aria-label="Toggle dark mode"><i class="fas fa-adjust"></i></a>
                 </li>
             </ul>
         </nav>
@@ -70,27 +80,27 @@
                 Here's a bit more <b class="secondary click" onclick="toggleModal()">about me</b>.
                 </p>
                 <div class="social__list">
-                    <a href="https://www.linkedin.com/in/isaacfunes/" target="_blank" class="social__link click">
+                    <a href="https://www.linkedin.com/in/isaacfunes/" target="_blank" class="social__link click" aria-label="LinkedIn profile">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
-                    <a href="https://github.com/KingTheoden1" target="_blank" class="social__link click">
+                    <a href="https://github.com/KingTheoden1" target="_blank" class="social__link click" aria-label="GitHub profile">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="./assets/isaac-funes-resume-2026.pdf" target="_blank" class="social__link click">
+                    <a href="./assets/isaac-funes-resume-2026.pdf" target="_blank" class="social__link click" aria-label="Download resume PDF">
                         <i class="fas fa-file-pdf"></i>
                     </a>
                 </div>
             </div>
         </header>
         <a href="#">
-            <button class="mail__btn click" onclick="toggleModal()">
+            <button class="mail__btn click" onclick="toggleModal()" aria-label="Open contact form">
                 <i class="fas fa-envelope"></i>
             </button>
         </a>
         <a href="#personal-projects" class="scroll">
             <div class="scroll__icon click"></div>
         </a>
-        <div class="modal">
+        <div class="modal" role="dialog" aria-modal="true" aria-label="About and Contact">
             <div class="modal__half modal__about">
                 <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
                 <h4 class="modal__sub-title modal__sub-title--about">Frontend Developer</h4>
@@ -135,7 +145,7 @@
                 </div>
             </div>
             <div class="modal__half modal__contact">
-                <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+                <i class="fas fa-times modal__exit click" onclick="toggleModal()" aria-label="Close modal" role="button" tabindex="0"></i>
                 <h3 class="modal__title modal__title--contact">
                     Let's have a chat!
                 </h3>
@@ -158,6 +168,7 @@
                     <button id="contact__submit" class="form__submit">
                         Send it my way
                     </button>
+                    <p class="form__error" id="form__error" role="alert" aria-live="assertive"></p>
                 </form>
                 <div class="modal__overlay modal__overlay--loading">
                     <i class="fas fa-spinner"></i>
@@ -167,15 +178,6 @@
                 </div>
             </div>
         </div>
-        <!-- <img src="./assets/semi circle.svg" class="shape shape--0">
-        <img src="./assets/circle.svg" class="shape shape--1">
-        <img src="./assets/squiggly.svg" class="shape shape--2">
-        <img src="./assets/circle.svg" class="shape shape--3">
-        <img src="./assets/triangle.svg" class="shape shape--4">
-        <img src="./assets/circle.svg" class="shape shape--5">
-        <img src="./assets/squiggly.svg" class="shape shape--6">
-        <img src="./assets/circle.svg" class="shape shape--7">
-        <img src="./assets/semi circle.svg" class="shape shape--8"> -->
     </section>
     <!-- Personal Projects -->
     <section id="personal-projects">
@@ -186,8 +188,8 @@
                 </h1>
                 <ul class="project__list">
                     <li class="project">
-                        <div class="project__wrapper" onclick="">
-                            <img src="./assets/gpt3-website.webp" class="project__img" alt="">
+                        <div class="project__wrapper">
+                            <img src="./assets/gpt3-website.webp" class="project__img" loading="lazy" alt="">
                             <div class="project__wrapper--bg"></div>
                             <div class="project__description">
                                 <h3 class="project__description--title">
@@ -214,8 +216,8 @@
                         </div>
                     </li>
                     <li class="project">
-                        <div class="project__wrapper" onclick="">
-                            <img src="./assets/CoinPulse.webp" class="project__img" alt="">
+                        <div class="project__wrapper">
+                            <img src="./assets/CoinPulse.webp" class="project__img" loading="lazy" alt="">
                             <div class="project__wrapper--bg"></div>
                             <div class="project__description">
                                 <h3 class="project__description--title">
@@ -238,8 +240,8 @@
                         </div>
                     </li>
                     <li class="project">
-                        <div class="project__wrapper" onclick="">
-                            <img src="./assets/gericht.webp" class="project__img" alt="">
+                        <div class="project__wrapper">
+                            <img src="./assets/gericht.webp" class="project__img" loading="lazy" alt="">
                             <div class="project__wrapper--bg"></div>
                             <div class="project__description">
                                 <h3 class="project__description--title">
@@ -262,8 +264,8 @@
                         </div>
                     </li>
                     <li class="project">
-                        <div class="project__wrapper" onclick="">
-                            <img src="./assets/ecommerce-site.webp" class="project__img" alt="">
+                        <div class="project__wrapper">
+                            <img src="./assets/ecommerce-site.webp" class="project__img" loading="lazy" alt="">
                             <div class="project__wrapper--bg"></div>
                             <div class="project__description">
                                 <h3 class="project__description--title">
@@ -289,8 +291,8 @@
                         </div>
                     </li>
                     <li class="project">
-                        <div class="project__wrapper" onclick="">
-                            <img src="./assets/F1_Pulse.webp" class="project__img" alt="">
+                        <div class="project__wrapper">
+                            <img src="./assets/F1_Pulse.webp" class="project__img" loading="lazy" alt="">
                             <div class="project__wrapper--bg"></div>
                             <div class="project__description">
                                 <h3 class="project__description--title">
@@ -328,8 +330,8 @@
                 </h1>
                 <ul class="project__list">
                     <li class="project">
-                        <div class="project__wrapper" onclick="">
-                            <img src="./assets/robomaniastem.webp" class="project__img" alt="">
+                        <div class="project__wrapper">
+                            <img src="./assets/robomaniastem.webp" class="project__img" loading="lazy" alt="">
                             <div class="project__wrapper--bg"></div>
                             <div class="project__description">
                                 <h3 class="project__description--title">
@@ -356,8 +358,8 @@
                         </div>
                     </li>
                     <li class="project">
-                        <div class="project__wrapper" onclick="">
-                            <img src="./assets/AAIS.webp" class="project__img" alt="">
+                        <div class="project__wrapper">
+                            <img src="./assets/AAIS.webp" class="project__img" loading="lazy" alt="">
                             <div class="project__wrapper--bg"></div>
                             <div class="project__description">
                                 <h3 class="project__description--title">
@@ -383,8 +385,8 @@
                         </div>
                     </li>
                     <li class="project">
-                        <div class="project__wrapper" onclick="">
-                            <img src="./assets/Hyperion Entities site.webp" class="project__img" />
+                        <div class="project__wrapper">
+                            <img src="./assets/Hyperion Entities site.webp" class="project__img" loading="lazy" />
                             <div class="project__wrapper--bg"></div>
                             <div class="project__description">
                                 <h3 class="project__description--title">(In progress) Hyperion Entities</h3>
@@ -401,8 +403,8 @@
                         </div>
                     </li>
                     <li class="project">
-                        <div class="project__wrapper" onclick="">
-                            <img src="./assets/ERC.webp" class="project__img" />
+                        <div class="project__wrapper">
+                            <img src="./assets/ERC.webp" class="project__img" loading="lazy" />
                             <div class="project__wrapper--bg"></div>
                             <div class="project__description">
                                 <h3 class="project__description--title">TAMU Education Research Center</h3>
@@ -440,8 +442,8 @@
             <ul class="project__list">
                 
                 <li class="project">
-                    <div class="project__wrapper" onclick="">
-                    <img src="./assets/converted_image_1.webp" class="project__img" />
+                    <div class="project__wrapper">
+                    <img src="./assets/converted_image_1.webp" class="project__img" loading="lazy" />
                     <div class="project__wrapper--bg"></div>
                     <div class="project__description">
                         <h3 class="project__description--title">BVCOG</h3>
@@ -459,8 +461,8 @@
                 </li>
 
                 <li class="project">
-                    <div class="project__wrapper" onclick="">
-                    <img src="./assets/converted_image_2.webp" class="project__img" />
+                    <div class="project__wrapper">
+                    <img src="./assets/converted_image_2.webp" class="project__img" loading="lazy" />
                     <div class="project__wrapper--bg"></div>
                     <div class="project__description">
                         <h3 class="project__description--title">BVRAC</h3>
@@ -478,8 +480,8 @@
                 </li>
 
                 <li class="project">
-                    <div class="project__wrapper" onclick="">
-                    <img src="./assets/converted_image_3.webp" class="project__img" />
+                    <div class="project__wrapper">
+                    <img src="./assets/converted_image_3.webp" class="project__img" loading="lazy" />
                     <div class="project__wrapper--bg"></div>
                     <div class="project__description">
                         <h3 class="project__description--title">Grassroots Landscaping</h3>
@@ -497,8 +499,8 @@
                 </li>
 
                 <li class="project">
-                    <div class="project__wrapper" onclick="">
-                    <img src="./assets/converted_image_4.webp" class="project__img" />
+                    <div class="project__wrapper">
+                    <img src="./assets/converted_image_4.webp" class="project__img" loading="lazy" />
                     <div class="project__wrapper--bg"></div>
                     <div class="project__description">
                         <h3 class="project__description--title">Willmark Custom Homes</h3>
@@ -516,8 +518,8 @@
                 </li>
 
                 <li class="project">
-                    <div class="project__wrapper" onclick="">
-                    <img src="./assets/converted_image_5.webp" class="project__img" />
+                    <div class="project__wrapper">
+                    <img src="./assets/converted_image_5.webp" class="project__img" loading="lazy" />
                     <div class="project__wrapper--bg"></div>
                     <div class="project__description">
                         <h3 class="project__description--title">Thomas Moore Feed</h3>
@@ -535,8 +537,8 @@
                 </li>
 
                 <li class="project">
-                    <div class="project__wrapper" onclick="">
-                    <img src="./assets/converted_image_6.webp" class="project__img" />
+                    <div class="project__wrapper">
+                    <img src="./assets/converted_image_6.webp" class="project__img" loading="lazy" />
                     <div class="project__wrapper--bg"></div>
                     <div class="project__description">
                         <h3 class="project__description--title">Wildernex</h3>
@@ -554,8 +556,8 @@
                 </li>
 
                 <li class="project">
-                    <div class="project__wrapper" onclick="">
-                    <img src="./assets/converted_image_7.webp" class="project__img" />
+                    <div class="project__wrapper">
+                    <img src="./assets/converted_image_7.webp" class="project__img" loading="lazy" />
                     <div class="project__wrapper--bg"></div>
                     <div class="project__description">
                         <h3 class="project__description--title">Alliance Roofing</h3>
@@ -573,8 +575,8 @@
                 </li>
 
                 <li class="project">
-                    <div class="project__wrapper" onclick="">
-                    <img src="./assets/converted_image_8.webp" class="project__img" />
+                    <div class="project__wrapper">
+                    <img src="./assets/converted_image_8.webp" class="project__img" loading="lazy" />
                     <div class="project__wrapper--bg"></div>
                     <div class="project__description">
                         <h3 class="project__description--title">Sutphin Solar</h3>
@@ -592,8 +594,8 @@
                 </li>
 
                 <li class="project">
-                    <div class="project__wrapper" onclick="">
-                    <img src="./assets/Community Clean Up.webp" class="project__img" />
+                    <div class="project__wrapper">
+                    <img src="./assets/Community Clean Up.webp" class="project__img" loading="lazy" />
                     <div class="project__wrapper--bg"></div>
                     <div class="project__description">
                         <h3 class="project__description--title">BV Community Clean-Up Challenge</h3>
@@ -611,8 +613,8 @@
                 </li>
 
                 <li class="project">
-                    <div class="project__wrapper" onclick="">
-                    <img src="./assets/Recovery Cryo.webp" class="project__img" />
+                    <div class="project__wrapper">
+                    <img src="./assets/Recovery Cryo.webp" class="project__img" loading="lazy" />
                     <div class="project__wrapper--bg"></div>
                     <div class="project__description">
                         <h3 class="project__description--title">Recovery Cryo</h3>
@@ -630,8 +632,8 @@
                 </li>
 
                 <li class="project">
-                    <div class="project__wrapper" onclick="">
-                    <img src="./assets/WorleyByrd.webp" class="project__img" />
+                    <div class="project__wrapper">
+                    <img src="./assets/WorleyByrd.webp" class="project__img" loading="lazy" />
                     <div class="project__wrapper--bg"></div>
                     <div class="project__description">
                         <h3 class="project__description--title">WorleyByrd Roofing & Restoration</h3>
@@ -649,8 +651,8 @@
                 </li>
                 
                 <li class="project">
-                    <div class="project__wrapper" onclick="">
-                    <img src="./assets/Culminating Experiences.webp" class="project__img" />
+                    <div class="project__wrapper">
+                    <img src="./assets/Culminating Experiences.webp" class="project__img" loading="lazy" />
                     <div class="project__wrapper--bg"></div>
                     <div class="project__description">
                         <h3 class="project__description--title">TAMU Culminating Experience</h3>
@@ -668,8 +670,8 @@
                 </li>
                 
                 <li class="project">
-                    <div class="project__wrapper" onclick="">
-                    <img src="./assets/Texas 4H.webp" class="project__img" />
+                    <div class="project__wrapper">
+                    <img src="./assets/Texas 4H.webp" class="project__img" loading="lazy" />
                     <div class="project__wrapper--bg"></div>
                     <div class="project__description">
                         <h3 class="project__description--title">Texas 4-H Foundation</h3>
@@ -687,8 +689,8 @@
                 </li>
                 
                 <li class="project">
-                    <div class="project__wrapper" onclick="">
-                    <img src="./assets/Gavii Cyber Security.webp" class="project__img" />
+                    <div class="project__wrapper">
+                    <img src="./assets/Gavii Cyber Security.webp" class="project__img" loading="lazy" />
                     <div class="project__wrapper--bg"></div>
                     <div class="project__description">
                         <h3 class="project__description--title">Gavii Cybersecurity</h3>
@@ -722,8 +724,8 @@
 
                 <ul class="project__list">
                     <li class="project">
-                        <div class="project__wrapper" onclick="">
-                            <img src="./assets/gpt3-website.webp" class="project__img" alt="">
+                        <div class="project__wrapper">
+                            <img src="./assets/gpt3-website.webp" class="project__img" loading="lazy" alt="">
                             <div class="project__wrapper--bg"></div>
                             <div class="project__description">
                                 <h3 class="project__description--title">
@@ -744,8 +746,8 @@
                         </div>
                     </li>
                     <li class="project">
-                        <div class="project__wrapper" onclick="">
-                            <img src="./assets/ecommerce-site.webp" class="project__img" alt="">
+                        <div class="project__wrapper">
+                            <img src="./assets/ecommerce-site.webp" class="project__img" loading="lazy" alt="">
                             <div class="project__wrapper--bg"></div>
                             <div class="project__description">
                                 <h3 class="project__description--title">
@@ -766,8 +768,8 @@
                         </div>
                     </li>
                     <li class="project">
-                        <div class="project__wrapper" onclick="">
-                            <img src="./assets/robomaniastem.webp" class="project__img" alt="">
+                        <div class="project__wrapper">
+                            <img src="./assets/robomaniastem.webp" class="project__img" loading="lazy" alt="">
                             <div class="project__wrapper--bg"></div>
                             <div class="project__description">
                                 <h3 class="project__description--title">
@@ -788,8 +790,8 @@
                         </div>
                     </li>
                     <li class="project">
-                        <div class="project__wrapper" onclick="">
-                            <img src="./assets/AAIS.webp" class="project__img" alt="">
+                        <div class="project__wrapper">
+                            <img src="./assets/AAIS.webp" class="project__img" loading="lazy" alt="">
                             <div class="project__wrapper--bg"></div>
                             <div class="project__description">
                                 <h3 class="project__description--title">
