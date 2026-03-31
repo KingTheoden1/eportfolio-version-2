@@ -2,7 +2,7 @@
 
 Personal portfolio website showcasing my frontend development projects, professional work, CMS experience, and Figma designs.
 
-**Live site:** [KingTheoden1.github.io](https://kingtheoden1.github.io) *(update with actual URL)*
+**Live site:** [eportfolio-alpha.vercel.app](https://eportfolio-alpha.vercel.app/)
 
 ---
 
