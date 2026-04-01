@@ -24,6 +24,17 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body {
+    background-color: var(--light-bg);
+    background-image: radial-gradient(circle, #d4d4d4 1px, transparent 1px);
+    background-size: 36px 36px;
+}
+
+body.dark-theme {
+    background-color: var(--dark-bg);
+    background-image: radial-gradient(circle, #333333 1px, transparent 1px);
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -46,7 +57,7 @@ button {
 }
 
 section {
-    background-color: var(--light-bg);
+    background-color: transparent;
     transition: all 300ms ease;
 }
 
@@ -168,10 +179,6 @@ nav,
 .dark-theme .fa-adjust,
 .dark-theme .header__para {
     color: white;
-}
-
-.dark-theme section {
-    background-color: var(--dark-bg);
 }
 
 .dark-theme #personal-logo {
@@ -651,7 +658,7 @@ PROJECTS
 }
 
 .project__wrapper:hover .project__wrapper--bg {
-    opacity: 0.7;
+    opacity: 0.85;
 }
 
 .project__wrapper--bg {
@@ -734,6 +741,38 @@ footer {
 }
 
 
+/* Back to top button */
+.back-to-top {
+    position: fixed;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--primary-blue);
+    color: var(--text-light);
+    font-size: 14px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 300ms ease, visibility 300ms ease, transform 300ms ease;
+    z-index: 100;
+    box-shadow: 0 4px 16px var(--shadow-light);
+}
+
+.back-to-top--visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.back-to-top:hover {
+    background-color: #1a4fd6;
+}
+
+
 /* Scroll fade-in animation */
 .fade-in {
     opacity: 0;
@@ -783,6 +822,21 @@ footer {
 
 /* Small phones, tablets, large smartphones */
 @media (max-width: 768px) {
+    .mail__btn {
+        width: 54px;
+        height: 54px;
+        font-size: 24px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .back-to-top {
+        bottom: 24px;
+        width: 32px;
+        height: 32px;
+        font-size: 13px;
+    }
+
     .nav__link--dropdown:hover .dropdown__menu {
         display: none; /* Disable hover dropdown on mobile */
     }

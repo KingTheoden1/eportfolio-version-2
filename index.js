@@ -169,6 +169,31 @@ function initCmsToggle() {
     cmsList.after(btn);
 }
 
+// Back to top visibility
+function initBackToTop() {
+    const btn = document.querySelector('.back-to-top');
+    if (!btn) return;
+    window.addEventListener('scroll', () => {
+        btn.classList.toggle('back-to-top--visible', window.scrollY > 400);
+    }, { passive: true });
+}
+
+// Scroll-spy: highlight Projects nav link when any project section is in view
+function initScrollSpy() {
+    const projectsLink = document.querySelector('.nav__link--dropdown .nav__link--anchor');
+    const sections = document.querySelectorAll('#personal-projects, #professional-projects, #cms-projects, #figma-projects');
+
+    const observer = new IntersectionObserver((entries) => {
+        const anyVisible = Array.from(sections).some(s => {
+            const rect = s.getBoundingClientRect();
+            return rect.top < window.innerHeight && rect.bottom > 0;
+        });
+        projectsLink.classList.toggle('active', anyVisible);
+    }, { threshold: 0.1 });
+
+    sections.forEach(s => observer.observe(s));
+}
+
 // Close modal on Escape key
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && isModalOpen) toggleModal();
@@ -178,4 +203,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initDropdown();
     initScrollAnimations();
     initCmsToggle();
+    initBackToTop();
+    initScrollSpy();
 });
