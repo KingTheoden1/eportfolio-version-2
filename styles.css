@@ -383,6 +383,16 @@ nav {
     font-size: 20px;
 }
 
+.nav__dropdown-icon {
+    font-size: 11px;
+    transition: transform 300ms ease;
+}
+
+.nav__link--dropdown:hover .nav__dropdown-icon,
+.nav__link--dropdown:focus-within .nav__dropdown-icon {
+    transform: rotate(180deg);
+}
+
 /*
 
 MODAL
@@ -763,8 +773,9 @@ footer {
     transform: scale(0.97);
 }
 
-/* Keyboard-triggered dropdown open state */
+/* Click/keyboard-triggered dropdown open state */
 .dropdown__menu--open {
+    display: flex !important;
     opacity: 1 !important;
     visibility: visible !important;
     transform: translateX(-50%) translateY(0) !important;

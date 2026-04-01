@@ -62,7 +62,7 @@ function toggleModal() {
     }
 }
 
-// Keyboard accessibility for dropdown
+// Dropdown: click/tap to toggle, keyboard accessible, closes on outside tap
 function initDropdown() {
     const dropdown = document.querySelector('.nav__link--dropdown');
     const menu = dropdown.querySelector('.dropdown__menu');
@@ -71,22 +71,38 @@ function initDropdown() {
     trigger.setAttribute('aria-haspopup', 'true');
     trigger.setAttribute('aria-expanded', 'false');
 
+    function openDropdown() {
+        menu.classList.add('dropdown__menu--open');
+        trigger.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeDropdown() {
+        menu.classList.remove('dropdown__menu--open');
+        trigger.setAttribute('aria-expanded', 'false');
+    }
+
+    function toggleDropdown() {
+        menu.classList.contains('dropdown__menu--open') ? closeDropdown() : openDropdown();
+    }
+
+    // Click/tap to toggle (covers both desktop and mobile)
+    trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        toggleDropdown();
+    });
+
+    // Keyboard support
     trigger.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
-            const isOpen = menu.classList.toggle('dropdown__menu--open');
-            trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        }
-        if (e.key === 'Escape') {
-            menu.classList.remove('dropdown__menu--open');
-            trigger.setAttribute('aria-expanded', 'false');
+            toggleDropdown();
         }
     });
 
+    // Close on Escape from anywhere
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && menu.classList.contains('dropdown__menu--open')) {
-            menu.classList.remove('dropdown__menu--open');
-            trigger.setAttribute('aria-expanded', 'false');
+            closeDropdown();
             trigger.focus();
         }
     });
@@ -94,8 +110,14 @@ function initDropdown() {
     // Close when focus leaves dropdown
     dropdown.addEventListener('focusout', (e) => {
         if (!dropdown.contains(e.relatedTarget)) {
-            menu.classList.remove('dropdown__menu--open');
-            trigger.setAttribute('aria-expanded', 'false');
+            closeDropdown();
+        }
+    });
+
+    // Close when tapping/clicking outside
+    document.addEventListener('click', (e) => {
+        if (!dropdown.contains(e.target)) {
+            closeDropdown();
         }
     });
 }
