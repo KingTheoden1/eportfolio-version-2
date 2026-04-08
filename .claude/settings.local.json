@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx --yes serve --version)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(sed -i 's/ onclick=\"\"\"\"//g' index.html)",
+      "Bash(sed -i 's/class=\"\"project__img\"\"/class=\"\"project__img\"\" loading=\"\"lazy\"\"/g' index.html)",
+      "Bash(curl -sL \"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg\" -o tailwind.svg)",
+      "Bash(curl -sL \"https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg\" -o figma.svg)"
+    ]
+  }
+}
