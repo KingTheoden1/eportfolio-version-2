@@ -4,6 +4,11 @@ Personal portfolio website showcasing my frontend development projects, professi
 
 **Live site:** [eportfolio-alpha.vercel.app](https://eportfolio-alpha.vercel.app/)
 
+## Collaborators
+
+- **Isaac Funes** — 95% of all development, design decisions, and content
+- **Claude (Anthropic)** — AI aide used for bug scanning, code review, and occasional suggestions
+
 ---
 
 ## Tech Stack
